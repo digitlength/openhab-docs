@@ -271,6 +271,7 @@ Selection item=<itemname> [label="<labelname>"] [icon="<iconname>"] [mappings="<
 
 The Selection element type renders the options as a dropdown menu or as a modal dialog prompt, depending on the user interface.
 The element type is, in its use cases, similar to a Switch with multiple states but has the advantage that the main UI stays clean, and more options can be offered.
+Note that the Selection element type will set the `item` to the number of the chosen element, not the mapped text.
 
 - `mappings` comes as an array of value-to-string translations, [documented further down](#mappings).
 
@@ -279,6 +280,7 @@ The element type is, in its use cases, similar to a Switch with multiple states 
 ```perl
 Selection item=LR_TV_Channel label="TV Channel" mappings=[0="DasErste", 1="BBC One", 2="Cartoon Network"]
 ```
+In this example, choosing `BBC One` will set the item `LR_TV_Channel` to 1.
 
 ![Presentation of the Selection element in BasicUI](images/sitemap_demo_selection.png)
 
